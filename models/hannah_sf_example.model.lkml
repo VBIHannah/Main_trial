@@ -56,11 +56,10 @@ explore: item {
     sql_on: ${store_sales.ss_sold_date_sk} =  ${date_dim.d_date_sk}
           or
           ${web_sales.ws_sold_date_sk} =  ${date_dim.d_date_sk};;
-    #required_joins: [store_sales,web_sales]
+          required_joins: [store_sales,web_sales]
   }
 }
 
-explore: item_join_path {}
 
 explore: promotion {}
 
